@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20120422055608) do
   create_table "divisions", :force => true do |t|
     t.string   "code"
     t.string   "description"
-    t.string   "overview"
+    t.text     "overview"
     t.string   "slug"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false

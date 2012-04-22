@@ -1,0 +1,20 @@
+<h2 class="menu_division">Industry Classifications</h2>
+<form action="<%= search_path %>" method="get" >
+  <%= label_tag(:query, "Search for a classification:") %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag "Search", :name => nil %>
+</form>
+
+<% if !@classifications.blank? %>
+  <p>Select a classification.</p>
+  <% @classifications.each do |classification| %>
+  <p><%= link_to classification.code + " " + classification.description, classification_path(classification), :class => "menu" %></p>
+  <% end %>
+<% else %>
+  <% if params[:query] %>
+    <p>No search results</p>
+  <% else %>
+    <p>Blank</p>
+  <% end %>
+  
+<% end %>

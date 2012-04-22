@@ -1,25 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Code:</b>
-  <%= @division.code %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @division.description %>
-</p>
-
-<p>
-  <b>Overview:</b>
-  <%= @division.overview %>
-</p>
-
-<p>
-  <b>Slug:</b>
-  <%= @division.slug %>
-</p>
-
-
-<%= link_to 'Edit', edit_division_path(@division) %> |
-<%= link_to 'Back', divisions_path %>
+<h3><%= @division.description %></h3>
+<p><%= @division.overview.html_safe %></p>
+<% @subdivisions.each do |subdivision| %>
+  <h4><%= subdivision.code %>: <%= subdivision.description %></h4>
+  <% subdivision.groups.each do |group| %>
+    <h5><%= group.code %>: <%= group.description %></h5>
+    <% group.classifications.each do |classification| %>
+      <p><%= link_to classification.code + " " + classification.description, classification_path(classification), :class => "menu" %></p>
+    <%end %>
+  <%end %>
+<%end %>

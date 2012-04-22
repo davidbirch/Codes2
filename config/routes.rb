@@ -1,22 +1,23 @@
 Codes2::Application.routes.draw do
   
-  resources :primary_activities
-
-  resources :classifications
-
-  resources :groups
-
-  resources :subdivisions
-
-  resources :divisions
-
   # -------------------------------------------------------
   # default route
   root :to => 'pages#home'
 
   # -------------------------------------------------------
+  # static pages
+  match '/a-to-z',   :to => 'pages#a_to_z'
+  match '/search',   :to => 'pages#search'
   
+  # -------------------------------------------------------
+  # specific resource routes
+  resources :primary_activities
+  resources :classifications
+  resources :groups
+  resources :subdivisions
+  resources :divisions
   
+  # -------------------------------------------------------
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

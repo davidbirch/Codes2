@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h2 class="menu_division">Divisions</h2>
+<p>Select a division.</p>
+<% @divisions.each do |division| %>
+  <p class="menu_industry_classification"><%= link_to division.code+": "+division.description, division_path(division), :class => "menu" %></p>
+<% end %> 
+
+

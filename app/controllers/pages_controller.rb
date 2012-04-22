@@ -4,6 +4,16 @@ class PagesController < ApplicationController
     @divisions = Division.all
   end
   
+  def search
+    if params[:query]
+      @classifications = Classification.all
+    else
+      @classifications = nil
+    end
+    
+    
+  end
+  
   def a_to_z
     
     @divisions = Division.all

@@ -1,0 +1,15 @@
+<h2 class="menu_division">Industry Classifications</h2>
+<p>Select a classification.</p>
+<% @divisions.each do |division| %>
+  <h3><%= division.description %></h3>
+    <% division.subdivisions.each do |subdivision| %>
+    <h4><%= subdivision.code %>: <%= subdivision.description %></h4>
+    <% subdivision.groups.each do |group| %>
+      <h5><%= group.code %>: <%= group.description %></h5>
+      <% group.classifications.each do |classification| %>
+        <p><%= link_to classification.code + " " + classification.description, classification_path(classification), :class => "menu" %></p>
+      <% end %>
+    <% end %>
+  <% end %> 
+<% end %>
+    

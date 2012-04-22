@@ -3,7 +3,7 @@ class CreateDivisions < ActiveRecord::Migration
     create_table :divisions do |t|
       t.string :code
       t.string :description
-      t.string :overview
+      t.text :overview
       t.string :slug
 
       t.timestamps
