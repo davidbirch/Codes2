@@ -1,5 +1,15 @@
 Codes2::Application.routes.draw do
   
+  resources :primary_activities
+
+  resources :classifications
+
+  resources :groups
+
+  resources :subdivisions
+
+  resources :divisions
+
   # -------------------------------------------------------
   # default route
   root :to => 'pages#home'

@@ -1,0 +1,27 @@
+<h1>Listing primary_activities</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Classification code</th>
+    <th>Classification</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @primary_activities.each do |primary_activity| %>
+  <tr>
+    <td><%= primary_activity.description %></td>
+    <td><%= primary_activity.classification_code %></td>
+    <td><%= primary_activity.classification_id %></td>
+    <td><%= link_to 'Show', primary_activity %></td>
+    <td><%= link_to 'Edit', edit_primary_activity_path(primary_activity) %></td>
+    <td><%= link_to 'Destroy', primary_activity, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Primary activity', new_primary_activity_path %>

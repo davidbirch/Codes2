@@ -1,0 +1,29 @@
+<%= form_for(@primary_activity) do |f| %>
+  <% if @primary_activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@primary_activity.errors.count, "error") %> prohibited this primary_activity from being saved:</h2>
+
+      <ul>
+      <% @primary_activity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :classification_code %><br />
+    <%= f.text_field :classification_code %>
+  </div>
+  <div class="field">
+    <%= f.label :classification_id %><br />
+    <%= f.number_field :classification_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

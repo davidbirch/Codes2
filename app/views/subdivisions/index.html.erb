@@ -1,0 +1,29 @@
+<h1>Listing subdivisions</h1>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Description</th>
+    <th>Division code</th>
+    <th>Division</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @subdivisions.each do |subdivision| %>
+  <tr>
+    <td><%= subdivision.code %></td>
+    <td><%= subdivision.description %></td>
+    <td><%= subdivision.division_code %></td>
+    <td><%= subdivision.division_id %></td>
+    <td><%= link_to 'Show', subdivision %></td>
+    <td><%= link_to 'Edit', edit_subdivision_path(subdivision) %></td>
+    <td><%= link_to 'Destroy', subdivision, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Subdivision', new_subdivision_path %>
