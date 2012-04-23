@@ -2,6 +2,8 @@
 <p>Select a division.</p>
 <% @divisions.each do |division| %>
   <p class="menu_industry_classification"><%= link_to division.code+": "+division.description, division_path(division), :class => "menu" %></p>
-<% end %> 
+<% end %>
+<p>This information is based on Australian and New Zealand Standard Industrial Classification (ANZSIC), 2006 (Revision 1.0).  You should always verify that this is the latest information at the Australian Bureau of Statistics.</p>
+    
 
 

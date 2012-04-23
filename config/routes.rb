@@ -6,8 +6,11 @@ Codes2::Application.routes.draw do
 
   # -------------------------------------------------------
   # static pages
-  match '/a-to-z',   :to => 'pages#a_to_z'
-  match '/search',   :to => 'pages#search'
+  match '/a-to-z',        :to => 'pages#a_to_z'
+  match '/search',        :to => 'pages#search'
+  match '/privacy',       :to => 'pages#privacy'
+  match '/contact',       :to => 'pages#contact'
+  match '/attribution',   :to => 'pages#attribution'
   
   # -------------------------------------------------------
   # specific resource routes

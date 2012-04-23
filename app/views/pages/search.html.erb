@@ -6,15 +6,13 @@
 </form>
 
 <% if !@classifications.blank? %>
-  <p>Select a classification.</p>
+  <p>Select from the search results.</p>
   <% @classifications.each do |classification| %>
   <p><%= link_to classification.code + " " + classification.description, classification_path(classification), :class => "menu" %></p>
   <% end %>
 <% else %>
   <% if params[:query] %>
-    <p>No search results</p>
-  <% else %>
-    <p>Blank</p>
+    <p>No search results</p>    
   <% end %>
-  
 <% end %>
+<p>This information is based on Australian and New Zealand Standard Industrial Classification (ANZSIC), 2006 (Revision 1.0).  You should always verify that this is the latest information at the Australian Bureau of Statistics.</p>

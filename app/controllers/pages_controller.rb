@@ -1,13 +1,26 @@
 class PagesController < ApplicationController
   
+  def privacy
+    
+  end
+  
+  def contact
+    
+  end
+  
+  
   def home
     @divisions = Division.all
   end
   
   def search
     if params[:query]
-      @classifications = Classification.all
+      # a search value exists
+      
+      @classifications = Classification.find_by_sql("SELECT * FROM classifications WHERE (classifications.description LIKE '%" + params[:query] + "%')")
+      #@classifications = Classification.all
     else
+      # no search value so don't get anything
       @classifications = nil
     end
     
