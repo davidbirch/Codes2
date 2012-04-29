@@ -17,7 +17,7 @@ class DivisionsController < ApplicationController
      end
     
     @title = "ANZSIC Codes | "+ @division.code + ": " + @division.description
-    @keywords = @division.description+", "+"ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes"
+    @keywords = @division.description+", "+"ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes, Services"
       
     respond_to do |format|
       format.html # show.html.erb

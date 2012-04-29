@@ -2,26 +2,26 @@ class PagesController < ApplicationController
   
   def privacy
      @title = "ANZSIC Codes | Privacy Statement"
-     @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes"
+     @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes, Services"
   end
   
   def contact
     @title = "ANZSIC Codes | Contact Us"
-    @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes"
+    @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes, Services"
     
   end
   
   
   def home
     @title = "ANZSIC Codes | Search for ANZSIC Codes"
-    @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes"
+    @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes, Services"
     
     @divisions = Division.all
   end
   
   def search
     @title = "ANZSIC Codes | Search"
-    @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes"
+    @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes, Services"
     
     if params[:query]
       # a search value exists
@@ -36,7 +36,7 @@ class PagesController < ApplicationController
   
   def a_to_z
     @title = "ANZSIC Codes | A to Z, View all ANZSIC codes"
-    @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes"
+    @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes, Services"
     
     @divisions = Division.all
     @divisions.each do |division|
