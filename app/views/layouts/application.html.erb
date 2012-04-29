@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ANZSIC Codes</title>
+  <meta charset="utf-8">
+  <title>ANZSIC</title>
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="contact@anzsic-codes.com.au">
+  <meta name="description" content="ANZSIC Codes.  Search for Australian and New Zealand Standard Industry Classifications (ANZSIC).">
+  
+  <link href="/favicon.png" rel="shortcut icon"> 
+  <link href="/apple-touch-icon-57x57.png" rel="apple-touch-icon">
+  <link href="/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
+  <link href="/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
+  
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= stylesheet_link_tag "custom", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  
+
 </head>
 <body>
   <%= render 'layouts/header' %>
   <div class="container">
     <div class="row full-width centre">
-      <p class="advertise_flag">Advertisment</p>
+      <p class="advertise-flag">Advertisment</p>
       <p><img src="http://placehold.it/320x50" alt="Placeholder Image 320 x 50" /></p>
     </div>
     <div class="row">
@@ -23,7 +34,7 @@
         <%= yield %>
       </div>
       <div class="span4 centre">
-        <p class="advertise_flag">Advertisment</p>
+        <p class="advertise-flag">Advertisment</p>
         <p><img src="http://placehold.it/200x200" alt="Placeholder Image 200 x 200" /></p>
       </div>
     </div>
