@@ -5,13 +5,7 @@
   
   <dt>Description</dt>
   <dd><%= @classification.description %></dd>
-  
-  <dt>Group code</dt>
-  <dd><%= @classification.group_code %></dd>
-  
-  <dt>Group</dt>
-  <dd><%= @classification.group_id %></dd>
-  
+    
   <dt>Primary Activities</dt>
   <% @primary_activities.each do |primary_activity| %>
     <dd><%= primary_activity.description %></dd>
