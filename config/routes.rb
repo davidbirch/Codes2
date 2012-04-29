@@ -14,11 +14,11 @@ Codes2::Application.routes.draw do
   
   # -------------------------------------------------------
   # specific resource routes
-  resources :primary_activities
-  resources :classifications
-  resources :groups
-  resources :subdivisions
-  resources :divisions
+  resources :classifications, :only => [:show]
+  resources :divisions, :only => [:show]
+  #resources :primary_activities
+   #resources :groups
+  #resources :subdivisions
   
   # -------------------------------------------------------
   
