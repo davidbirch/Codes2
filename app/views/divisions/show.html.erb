@@ -1,5 +1,5 @@
 <h3><%= @division.description %></h3>
-<p><%= @division.overview.html_safe %></p>
+<%= @division.overview.html_safe %>
 <% @subdivisions.each do |subdivision| %>
   <h4><%= subdivision.code %>: <%= subdivision.description %></h4>
   <% subdivision.groups.each do |group| %>
