@@ -11,7 +11,12 @@ class PagesController < ApplicationController
     
   end
   
-  
+  def attribution
+    @title = "ANZSIC Codes | Attribution"
+    @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes, Services"
+    
+  end
+    
   def home
     @title = "ANZSIC Codes | Search for ANZSIC Codes"
     @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes, Services"
@@ -35,7 +40,7 @@ class PagesController < ApplicationController
   end
   
   def a_to_z
-    @title = "ANZSIC Codes | A to Z, View all ANZSIC codes"
+    @title = "ANZSIC Codes | List all ANZSIC Codes"
     @keywords = "ANZSIC, ANZSIC Code, ANZSIC Codes, Industry Classification, Industrial Classification, Australian Industry, Australia Industry, New Zealand Industry, Standard Industry Codes, Services"
     
     @divisions = Division.all
